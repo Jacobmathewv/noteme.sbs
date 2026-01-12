@@ -6,7 +6,29 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    // Update scroll progress bar
+    updateScrollProgress();
 });
+
+// Scroll progress bar
+function updateScrollProgress() {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    if (!scrollProgress) {
+        // Create scroll progress bar if it doesn't exist
+        const progressBar = document.createElement('div');
+        progressBar.className = 'scroll-progress';
+        document.body.appendChild(progressBar);
+    }
+    
+    const progressBar = document.querySelector('.scroll-progress');
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    
+    if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+    }
+}
 
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
@@ -247,6 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveNavLink();
     setupFilters();
     parallaxEffect();
+    addEnhancedHoverEffects();
+    addRevealAnimations();
+    revealOnScroll();
     
     // Add copy buttons after a short delay to ensure code blocks are rendered
     setTimeout(addCopyButtons, 100);
@@ -255,4 +280,159 @@ document.addEventListener('DOMContentLoaded', () => {
 // Loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    createParticleBackground();
 });
+
+// Create particle background
+function createParticleBackground() {
+    const particleBg = document.createElement('div');
+    particleBg.className = 'particle-bg';
+    document.body.appendChild(particleBg);
+    
+    // Create particles
+    const particleCount = 20;
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random size, position, and color
+        const size = Math.random() * 4 + 2;
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        const delay = Math.random() * 10;
+        const duration = Math.random() * 10 + 10;
+        
+        const colors = [
+            'rgba(99, 102, 241, 0.3)',
+            'rgba(139, 92, 246, 0.3)',
+            'rgba(6, 182, 212, 0.3)'
+        ];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        particle.style.background = color;
+        particle.style.animationDelay = delay + 's';
+        particle.style.animationDuration = duration + 's';
+        
+        particleBg.appendChild(particle);
+    }
+}
+
+// Mouse parallax effect
+document.addEventListener('mousemove', (e) => {
+    const layers = document.querySelectorAll('.parallax-layer');
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+    
+    layers.forEach((layer, index) => {
+        const speed = (index + 1) * 20;
+        const x = (mouseX - 0.5) * speed;
+        const y = (mouseY - 0.5) * speed;
+        
+        layer.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+// Enhanced hover effects
+function addEnhancedHoverEffects() {
+    const cards = document.querySelectorAll('.blog-card, .topic-card, .contact-link');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const ripple = document.createElement('div');
+            ripple.style.position = 'absolute';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.width = '0';
+            ripple.style.height = '0';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(99, 102, 241, 0.2)';
+            ripple.style.transform = 'translate(-50%, -50%)';
+            ripple.style.transition = 'all 0.6s ease';
+            ripple.style.pointerEvents = 'none';
+            
+            this.style.position = 'relative';
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.style.width = '400px';
+                ripple.style.height = '400px';
+                ripple.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+}
+
+// Typing effect for hero text
+function typingEffect(element, text, speed = 100) {
+    let i = 0;
+    element.textContent = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
+
+// Reveal elements on scroll with stagger
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('revealed');
+                }, index * 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    reveals.forEach(reveal => observer.observe(reveal));
+}
+
+// Smooth reveal for sections
+function addRevealAnimations() {
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach((section, index) => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.6s ease';
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px'
+    });
+    
+    sections.forEach(section => observer.observe(section));
+}
