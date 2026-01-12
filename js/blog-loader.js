@@ -1,4 +1,3 @@
-
 // Blog posts configuration
 // This will load blog posts from the posts/ directory
 const POSTS_DIR = 'posts/';
