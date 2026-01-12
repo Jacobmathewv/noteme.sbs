@@ -1,4 +1,3 @@
-
 // Load and render individual blog post
 async function loadPost() {
     // Get post ID from URL parameter
