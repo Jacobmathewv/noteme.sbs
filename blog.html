@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All blog posts - AWS, Linux, and DevOps tutorials">
+    <title>All Blogs | NoteMe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Note</span><span class="logo-accent">Me</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blogs</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">All Blog Posts</h1>
+            <p class="page-subtitle">Technical guides, tutorials, and insights on AWS, Linux, and DevOps</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-category="all">All Posts</button>
+                <button class="filter-btn" data-category="aws">AWS</button>
+                <button class="filter-btn" data-category="linux">Linux</button>
+                <button class="filter-btn" data-category="devops">DevOps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blogs-listing">
+        <div class="container">
+            <div id="all-blogs-grid" class="blog-grid">
+                <!-- All blog posts will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 NoteMe.sbs. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blogs</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog-loader.js"></script>
+</body>
+</html>
 
