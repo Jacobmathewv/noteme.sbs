@@ -59,6 +59,96 @@
       "readTime": "9 min read",
       "tags": ["DNS", "Linux", "Networking"],
       "icon": "🌐"
+    },
+    {
+      "id": "aws-s3-best-practices",
+      "title": "AWS S3 Security and Performance Best Practices",
+      "excerpt": "Learn how to secure your S3 buckets and optimize performance for large-scale storage needs.",
+      "category": "aws",
+      "date": "2024-12-25",
+      "readTime": "11 min read",
+      "tags": ["AWS", "S3", "Security", "Storage"],
+      "icon": "🪣"
+    },
+    {
+      "id": "docker-containers-intro",
+      "title": "Introduction to Docker: Containerize Your Applications",
+      "excerpt": "Get started with Docker containers. Learn about images, containers, volumes, and Docker Compose.",
+      "category": "devops",
+      "date": "2024-12-22",
+      "readTime": "13 min read",
+      "tags": ["Docker", "Containers", "DevOps"],
+      "icon": "🐳"
+    },
+    {
+      "id": "kubernetes-basics",
+      "title": "Kubernetes Fundamentals for Beginners",
+      "excerpt": "Understanding Kubernetes architecture, pods, deployments, and services for container orchestration.",
+      "category": "devops",
+      "date": "2024-12-20",
+      "readTime": "16 min read",
+      "tags": ["Kubernetes", "DevOps", "Containers", "Orchestration"],
+      "icon": "☸️"
+    },
+    {
+      "id": "linux-systemd-services",
+      "title": "Creating and Managing Systemd Services on Linux",
+      "excerpt": "Learn how to create custom systemd services for your applications and manage them effectively.",
+      "category": "linux",
+      "date": "2024-12-18",
+      "readTime": "8 min read",
+      "tags": ["Linux", "Systemd", "Services"],
+      "icon": "⚙️"
+    },
+    {
+      "id": "aws-lambda-functions",
+      "title": "Serverless Computing with AWS Lambda",
+      "excerpt": "Build and deploy serverless functions with AWS Lambda. Learn about triggers, layers, and best practices.",
+      "category": "aws",
+      "date": "2024-12-15",
+      "readTime": "10 min read",
+      "tags": ["AWS", "Lambda", "Serverless"],
+      "icon": "λ"
+    },
+    {
+      "id": "monitoring-prometheus-grafana",
+      "title": "Infrastructure Monitoring with Prometheus and Grafana",
+      "excerpt": "Set up comprehensive monitoring for your infrastructure using Prometheus for metrics and Grafana for visualization.",
+      "category": "devops",
+      "date": "2024-12-12",
+      "readTime": "14 min read",
+      "tags": ["Monitoring", "Prometheus", "Grafana", "DevOps"],
+      "icon": "📊"
+    },
+    {
+      "id": "linux-bash-scripting",
+      "title": "Advanced Bash Scripting Techniques",
+      "excerpt": "Master advanced bash scripting with functions, error handling, and best practices for automation.",
+      "category": "linux",
+      "date": "2024-12-10",
+      "readTime": "12 min read",
+      "tags": ["Bash", "Scripting", "Linux", "Automation"],
+      "icon": "💻"
+    },
+    {
+      "id": "aws-vpc-networking",
+      "title": "AWS VPC and Networking Deep Dive",
+      "excerpt": "Understand AWS Virtual Private Cloud, subnets, route tables, and network security groups.",
+      "category": "aws",
+      "date": "2024-12-08",
+      "readTime": "15 min read",
+      "tags": ["AWS", "VPC", "Networking", "Security"],
+      "icon": "🌐"
+    },
+    {
+      "id": "terraform-infrastructure-code",
+      "title": "Infrastructure as Code with Terraform",
+      "excerpt": "Learn to manage your infrastructure with Terraform. Understand resources, modules, and state management.",
+      "category": "devops",
+      "date": "2024-12-05",
+      "readTime": "13 min read",
+      "tags": ["Terraform", "IaC", "DevOps", "Automation"],
+      "icon": "🏗️"
     }
   ]
 }
