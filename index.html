@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical blog about AWS, Linux, and DevOps by Justin">
+    <title>NoteMe | Tech Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Note</span><span class="logo-accent">Me</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#blogs" class="nav-link">Blogs</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Documenting</span>
+                        <span class="title-line gradient-text">DevOps Journey</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Technical insights on AWS, Linux, and Cloud Infrastructure. 
+                        6+ years of sysadmin experience shared through practical guides and tutorials.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#blogs" class="btn btn-primary">Read Blogs</a>
+                        <a href="#about" class="btn btn-secondary">About Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">☁️</div>
+                        <div class="card-text">AWS</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🐧</div>
+                        <div class="card-text">Linux</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-text">DevOps</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="6">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Blog Posts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Technical Guides</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Topics -->
+    <section class="topics-section">
+        <div class="container">
+            <h2 class="section-title">What I Write About</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">☁️</div>
+                    <h3>AWS & Cloud</h3>
+                    <p>Deep dives into AWS services, EC2 optimization, custom AMI creation, and cloud infrastructure management.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">🐧</div>
+                    <h3>Linux Administration</h3>
+                    <p>System administration tutorials, AlmaLinux configurations, mail server setups, and automation scripts.</p>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">⚙️</div>
+                    <h3>DevOps Practices</h3>
+                    <p>CI/CD pipelines, infrastructure as code, monitoring solutions, and best practices for modern operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blogs -->
+    <section id="blogs" class="blogs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <a href="blog.html" class="view-all">View All →</a>
+            </div>
+            <div id="blog-grid" class="blog-grid">
+                <!-- Blog posts will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-description">
+                        Hi, I'm Justin, a Linux System Administrator with 6 years of experience in AWS and cloud infrastructure. 
+                        I specialize in VPS management, custom AMI creation, and mail server configuration.
+                    </p>
+                    <p class="about-description">
+                        This blog is my way of documenting what I learn and sharing practical solutions to real-world problems. 
+                        Whether you're just starting with Linux or optimizing production workloads on AWS, I hope you'll find 
+                        something useful here.
+                    </p>
+                    <div class="tech-stack">
+                        <div class="tech-item">AWS</div>
+                        <div class="tech-item">Linux</div>
+                        <div class="tech-item">AlmaLinux</div>
+                        <div class="tech-item">Postfix</div>
+                        <div class="tech-item">Dovecot</div>
+                        <div class="tech-item">DNS</div>
+                        <div class="tech-item">Firewall</div>
+                        <div class="tech-item">VPS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">Have questions or want to connect? Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:your@email.com" class="contact-link">
+                        <span class="icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+                        <span class="icon">💻</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank">
+                        <span class="icon">💼</span>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 NoteMe.sbs. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog-loader.js"></script>
+</body>
+</html>
 
